@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Zip File</title>
+</head>
+<body>
+    <h1>Download Zip File Example</h1>
+    
+    <button onclick="downloadZip()">Download Zip File</button>
+
+    <script>
+        function downloadZip() {
+            // Create a temporary element
+            var link = document.createElement("a");
+            link.download = "Bot Lucky"; // Set the file name
+            
+            // Set the URL of the zip file to the link
+            link.href = "BotLucky-V5.zip";
+            
+            // Append the link to the document body
+            document.body.appendChild(link);
+            
+            // Simulate a click on the link to start the download
+            link.click();
+            
+            // Clean up the temporary element
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
